@@ -40,6 +40,6 @@ gulp.task("images", function(){
 
 gulp.task("build", ["views", "server", "scripts", "styles", "images"]);
 
-gulp.task("watch", ["build"], function(){
+gulp.task("watch", ["build"] function(){
 	gulp.watch("src/**/*", ["build"]);
 });
