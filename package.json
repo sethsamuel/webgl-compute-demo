@@ -1,0 +1,45 @@
+{
+  "name": "webgl-compute-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-docker": "docker build -t sethfsamuel/webgl-compute-demo .",
+    "run-docker": "docker run -it --rm -p 8000:8000 sethfsamuel/webgl-compute-demo",
+    "build": "./node_modules/.bin/gulp build",
+    "watch": "./node_modules/.bin/gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd dist; node --harmony index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sethsamuel/webgl-compute-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethsamuel/webgl-compute-demo/issues"
+  },
+  "homepage": "https://github.com/sethsamuel/webgl-compute-demo",
+  "devDependencies": {
+    "babel-core": "6.3.17",
+    "babel-loader": "6.2.0",
+    "babel-preset-es2015": "6.3.13",
+    "gulp": "3.9.0",
+    "gulp-babel": "6.1.1",
+    "gulp-jade": "1.1.0",
+    "gulp-stylus": "2.2.0",
+    "gulp-webpack": "1.5.0",
+    "lodash": "^3.10.1",
+    "reqwest": "2.0.5",
+    "vinyl-named": "1.1.0",
+    "webpack": "1.12.9",
+    "worker-loader": "0.7.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "koa": "1.1.2",
+    "koa-body": "1.4.0",
+    "koa-static": "1.5.2"
+  }
+}
