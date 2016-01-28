@@ -9,7 +9,8 @@
     "build": "./node_modules/.bin/gulp build",
     "watch": "./node_modules/.bin/gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd dist; node --harmony index.js"
+    "start": "cd dist; node --harmony index.js",
+    "deploy-to-gh": "rm -rf dist; npm run build; git branch -D gh-pages; git checkout --orphan gh-pages; git reset; cd dist; /bin/ls | xargs -I % sh -c 'cp -R % ..; git add ../%;'; cd ..; git commit -m 'Page update'; git push -f origin gh-pages; git clean -df; git checkout master; git reset; git clean -df;"
   },
   "repository": {
     "type": "git",
